@@ -26,5 +26,5 @@ int main()
 	if (dem != 0)
 		cout << max << endl;
 	else
-		cout << "-)" << endl;
+		cout << "-" << endl;
 }
