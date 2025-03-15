@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <sstream>
+using namespace std;
+int a[100001];
+int main()
+{
+	string a;
+	getline(cin, a);
+	stringstream ss(a);
+	string res = "", tmp;
+	while (ss >> tmp)
+	{
+		for (int i = 0; i < tmp.size(); i++)
+		{
+			res += tolower(tmp[i]);
+		}
+		res += " ";
+	}
+	res.pop_back();
+	a = res;
+	cout << a << endl;
+	return 0;
+}
