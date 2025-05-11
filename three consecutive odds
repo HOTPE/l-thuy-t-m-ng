@@ -1,0 +1,27 @@
+#include <iostream>
+int arr[100];
+using namespace std;
+bool threeconsecutiveodds(int a[], int n)
+{
+	if (n < 3)
+		return false;
+	for (int i = 0; i < n - 2; i++)
+	{
+		if (a[i] % 2 != 0 && a[i + 1] % 2 != 0 && a[i + 2] % 2 != 0)
+			return true;
+	}
+	return false;
+}
+int main()
+{
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
+	if (threeconsecutiveodds(arr, n))
+		cout << "true";
+	else
+		cout << "false";
+}
